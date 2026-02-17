@@ -1,0 +1,52 @@
+$slate-900: #1f314f;
+$slate-500: #68778d;
+$slate-300: #d5e1ef;
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: "Outfit", sans-serif;
+    background-color: $slate-300;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    main {
+        width: 18rem;
+        background-color: white;
+        padding: 0.9rem;
+        border-radius: 0.8rem;
+        text-align: center;
+        box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.2);
+
+        img {
+            width: 100%;
+            object-fit: contain;
+            border-radius: 0.8rem;
+        }
+
+        h1 {
+            color: $slate-900;
+            font-size: 1.3rem;
+            font-weight: 700;
+            line-height: 120%;
+            padding: 0.9rem 0;
+        }
+
+        p {
+            padding: 0 4px;
+            color: $slate-500;
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 140%;
+            letter-spacing: 0.2px;
+            padding-bottom: 0.9rem;
+        }
+    }
+}

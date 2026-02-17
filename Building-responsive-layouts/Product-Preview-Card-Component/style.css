@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap');
+
+:root {
+  --primary-500: hsl(158, 36%, 37%);
+  --primary-700: hsl(158, 42%, 18%);
+  --secondary: hsl(30, 38%, 92%);
+
+  --Black: hsl(212, 21%, 14%);
+  --Grey: hsl(228, 12%, 48%);
+  --Cream: hsl(30, 38%, 92%);
+  --White: hsl(0, 0%, 100%);
+
+  --Montserrat: 'Montserrat', sans-serif;
+  --Fraunces: "Fraunces", serif;
+}
+
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+}
+
+body {
+  background-color: var(--Cream);
+  color: var(--Grey);
+  font-family: var(--Montserrat);
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
+}
+
+img,
+svg,
+picture {
+  width: 100%;
+  display: block;
+}
+
+.product-card {
+  background-color: var(--White);
+  margin: 1rem;
+  max-width: 575px;
+  display: flex;
+  flex-direction: row;
+  border-radius: 0.75rem;
+  overflow: hidden;
+
+  .left {
+    flex: 1;
+    height: 100%;
+
+    img {
+      width: 100%;
+      height: auto;
+      object-fit: fill;
+    }
+  }
+
+  .right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 0.5rem;
+    padding: 2rem;
+
+    span {
+      text-transform: uppercase;
+      font-weight: 500;
+      color: var(--Grey);
+    }
+
+    h1 {
+      line-height: 2.5rem;
+      font-size: 2.8rem;
+      color: var(--Black);
+      text-transform: capitalize;
+      color: var(--Black);
+      font-family: var(--Fraunces);
+    }
+
+    p {
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+
+    .prcing {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+      h2 {
+        color: var(--primary-500);
+        font-family: var(--Fraunces);
+        font-size: 2rem;
+      }
+
+      span {
+        font-size: 0.9rem;
+        color: var(--Grey);
+        text-decoration: line-through;
+      }
+    }
+
+    .card-btn {
+      padding: 1rem;
+      border-radius: 0.75rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      background-color: var(--primary-500);
+      color: var(--White);
+      outline: none;
+      border: none;
+      transition: all 0.3s ease-in-out;
+      cursor: pointer;
+
+      &:hover {
+        background-color: var(--primary-700);
+      }
+
+      img {
+        width: 1rem;
+        height: auto;
+      }
+
+    }
+  }
+}
+
+@media (max-width: 540px) {
+  .product-card {
+    flex-direction: column;
+  }
+
+  .right {
+    h1 {
+      font-size: 2rem !important;
+    }
+  }
+}

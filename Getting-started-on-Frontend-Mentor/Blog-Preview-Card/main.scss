@@ -1,0 +1,98 @@
+$Yellow: hsl(47, 88%, 63%);
+$Gray-500: hsl(0, 0%, 42%);
+$Gray-950: hsl(0, 0%, 7%);
+
+@font-face {
+    font-family: "Figtree";
+    src: url("assets/fonts/Figtree-VariableFont_wght.ttf") format("truetype");
+    font-weight: 100 900;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Figtree";
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: $Yellow;
+
+    main {
+        max-width: 25rem;
+        background-color: white;
+        padding: 1.3rem;
+        border: 1px solid black;
+        border-radius: 16px;
+        box-shadow: 10px 10px black;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+
+        .Illustration {
+            width: 100%;
+            object-fit: contain;
+            border-radius: 16px;
+        }
+
+        span {
+            width: fit-content;
+            background-color: $Yellow;
+            border-radius: 5px;
+            padding: 8px 10px;
+            font-size: 0.875rem;
+            font-weight: 800;
+            line-height: 150%;
+        }
+
+        p:nth-of-type(1) {
+            color: black;
+            font-size: 0.875rem;
+            font-weight: 500;
+            line-height: 150%;
+        }
+
+        h1 {
+            font-size: 1.5rem;
+            font-weight: 800;
+            line-height: 150%;
+            cursor: pointer;
+            transition: 0.4s;
+        }
+
+        h1:hover {
+            color: $Yellow;
+        }
+
+        p:nth-of-type(2) {
+            color: $Gray-500;
+            font-size: 1rem;
+            font-weight: 500;
+            line-height: 150%;
+        }
+
+        .author {
+            height: 2.5rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+
+            img {
+                height: 100%;
+                width: auto;
+                object-fit: contain;
+            }
+
+            p {
+                font-size: 0.875rem;
+                font-weight: 800;
+                line-height: 150%;
+            }
+        }
+    }
+}
