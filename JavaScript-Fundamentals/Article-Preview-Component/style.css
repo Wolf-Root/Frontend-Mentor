@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+
+:root {
+  --Very-Dark-Grayish-Blue: hsl(217, 19%, 35%);
+  --Desaturated-Dark-Blue: hsl(214, 17%, 51%);
+  --Grayish-Blue: hsl(212, 23%, 69%);
+  --Light-Grayish-Blue: hsl(210, 46%, 95%);
+
+  --fs-13: 13px;
+}
+
+body {
+  font-size: 13px;
+  font-family: "Manrope", sans-serif;
+  background-color: var(--Light-Grayish-Blue);
+}
+
+/* I can't implement that using Tailwind CSS because of the animation. */
+
+.share-option {
+
+  --scale: 0;
+  --translateX: -50%;
+  --translateY: 0;
+
+  background: var(--Very-Dark-Grayish-Blue);
+  position: absolute;
+  bottom: calc(100% + 28px);
+  left: 50%;
+  transform: translate(var(--translateX), var(--translateY)) scale(var(--scale));
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 17px 30px;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px -5px #0003;
+  transform-origin: bottom;
+  visibility: hidden;
+  transition: all 0.25s ease;
+}
+
+.share-option.active {
+  --scale: 1;
+  visibility: visible;
+}
+
+.share-option::after {
+  content: '';
+  background: var(--Very-Dark-Grayish-Blue);
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -60%) rotate(45deg);
+}
+
+
+@media screen and (max-width: 768px) {
+
+  .share-option::after {
+    display: none;
+  }
+
+  .share-option {
+
+    --scale: 1;
+    --translateX: 0;
+    --translateY: 100%;
+
+    inset: -20px -28px;
+    border-radius: 0;
+    padding: 17px 30px;
+    z-index: -1;
+  }
+
+  .share-option.active {
+    --translateY: 0;
+  }
+}

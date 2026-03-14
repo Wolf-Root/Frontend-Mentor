@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+
+  <title>Frontend Mentor | Article preview component</title>
+
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="min-h-screen flex flex-col justify-center items-center p-5">
+
+  <main id="card" class="container mx-auto">
+
+    <!-- Flex Container -->
+    <div
+      class="bg-white max-w-3xl mx-auto rounded-xl flex flex-col md:flex-row justify-center shadow-2xl overflow-hidden md:overflow-visible">
+
+      <!-- Image -->
+      <div class="flex-2 overflow-hidden md:rounded-l-xl">
+        <img src="./images/drawers.jpg" alt="Drawers"
+          class="size-full object-cover object-left duration-300 hover:scale-110">
+      </div>
+
+      <!-- Text  -->
+      <div class="flex-3 flex flex-col gap-5 p-[30px_28px_20px] md:py-8 md:px-10">
+
+        <h1 class="text-md/7 md:text-2xl/7 font-bold text-(--Very-Dark-Grayish-Blue)">
+          Shift the overall look and feel by adding these wonderful touches to furniture in your home
+        </h1>
+
+        <p class="text-(--Desaturated-Dark-Blue)">
+          Ever been in a room and felt like something was missing? Perhaps
+          it felt slightly bare and uninviting. I’ve got some simple tips
+          to help you make any room feel complete.
+        </p>
+
+        <div class="flex justify-between items-center relative md:static">
+
+          <div class="flex items-center gap-4">
+            <img src="./images/avatar-michelle.jpg" alt="Michelle Appleton" class="size-8 md:size-10 rounded-full">
+
+            <h2 class="flex flex-col font-bold text-(--Very-Dark-Grayish-Blue)">
+              Michelle Appleton
+              <span class="text-(--Grayish-Blue)">28 Jun 2020</span>
+            </h2>
+          </div>
+
+
+          <div class="static md:relative z-10">
+
+            <button id="share-button"
+              class="flex-1 p-1.5 md:p-2 rounded-full cursor-pointer bg-(--Light-Grayish-Blue) group duration-300 hover:bg-(--Desaturated-Dark-Blue) active:bg-(--Very-Dark-Grayish-Blue)">
+              <img src="./images/icon-share.svg" alt="Share" class="group-hover:brightness-0 group-hover:invert-100">
+            </button>
+
+            <div class="share-option md:w-52" id="share-option">
+              <p class="flex-1 text-(--Grayish-Blue) uppercase text-xs">Share</p>
+
+              <div class="flex-2 flex items-center gap-4">
+                <img src="./images/icon-facebook.svg" alt="facebook">
+                <img src="./images/icon-twitter.svg" alt="twitter">
+                <img src="./images/icon-pinterest.svg" alt="pinterest">
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+
+  <script src="main.js"></script>
+</body>
+
+</html>
