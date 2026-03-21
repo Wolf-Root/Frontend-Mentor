@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <!-- Cascading Style Sheets -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Tailwind Css -->
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+  <title>Frontend Mentor | Newsletter sign-up form with success message</title>
+
+</head>
+
+<body
+  class="min-h-dvh bg-(--blue-700) text-(--blue-800) font-[Roboto] container mx-auto flex flex-col items-center justify-center">
+
+  <main>
+
+    <!-- Sign-up form start -->
+    <section id="signUp"
+      class="w-full max-w-4xl bg-white md:rounded-2xl md:p-6 flex items-center justify-between flex-col-reverse lg:flex-row">
+
+      <div class="flex-1 flex flex-col gap-5 p-10">
+        <h1 class="font-bold text-5xl">Stay updated!</h1>
+        <p>Join 60,000+ product managers receiving monthly updates on:</p>
+
+        <ul class="flex flex-col gap-2 text-nowrap">
+          <li class="flex items-center gap-3">
+            <img src="./images/icon-list.svg" alt="list icon" class="size-5">
+            Product discovery and building what matters
+          </li>
+          <li class="flex items-center gap-3">
+            <img src="./images/icon-list.svg" alt="list icon" class="size-5">
+            Measuring to ensure updates are a success
+          </li>
+          <li class="flex items-center gap-3">
+            <img src="./images/icon-list.svg" alt="list icon" class="size-5">
+            And much more!
+          </li>
+        </ul>
+
+        <form id="form" novalidate class="flex flex-col items-stretch justify-between">
+          <div class="flex items-center justify-between text-xs font-bold py-3">
+            <label for="email">Email address</label>
+            <span id="emailError" aria-live="polite" class="text-red-500"></span>
+          </div>
+
+          <input type="email" id="email" name="email" placeholder="email@company.com"
+            class="p-4 rounded-xl outline-2 outline-(--grey) focus:outline-(--blue-800)" aria-describedby="emailError"
+            required aria-required="true">
+
+          <button type="submit" id="submitBtn"
+            class="w-full bg-(--blue-800) text-white p-4 rounded-xl mt-6 cursor-pointer hover:bg-gradient-to-r from-[#ff527b] to-[#ff6a3a] hover:shadow-xl hover:shadow-orange-200">
+            Subscribe to monthly newsletter
+          </button>
+        </form>
+      </div>
+
+      <picture class="flex-1 w-full">
+        <source media="(min-width: 1024px)" srcset="./images/illustration-sign-up-desktop.svg">
+        <source media="(min-width: 768px)" srcset="./images/illustration-sign-up-tablet.svg">
+
+        <img src="./images/illustration-sign-up-mobile.svg" alt="illustration" class="size-full object-cover">
+      </picture>
+    </section>
+    <!-- Sign-up form end -->
+
+    <!-- Success message start -->
+    <section id="successMessage"
+      class="hidden h-dvh md:h-full w-full max-w-lg bg-white md:rounded-2xl flex-col md:items-start gap-5 p-10">
+
+      <img src="./images/icon-success.svg" alt="success icon">
+
+      <h1 class="font-bold text-6xl">Thanks for subscribing!</h1>
+      <p>
+        A confirmation email has been sent to <br> <b id="currentEmail"></b>.
+        Please open it and click the button inside to confirm your subscription.
+      </p>
+
+      <button id="dismissBtn"
+        class="w-full bg-(--blue-800) text-white p-4 rounded-xl mt-6 cursor-pointer hover:bg-gradient-to-r from-[#ff527b] to-[#ff6a3a] hover:shadow-xl hover:shadow-orange-200">
+        Dismiss message
+      </button>
+
+    </section>
+    <!-- Success message end -->
+
+  </main>
+
+  <!-- Java Script  -->
+  <script src="./main.js"></script>
+</body>
+
+</html>
