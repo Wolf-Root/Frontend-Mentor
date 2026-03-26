@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Time tracking dashboard</title>
+
+  <!-- Cascading Style Sheets (CSS) -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <style type="text/tailwindcss">
+    @theme { 
+      --breakpoint-xs: 500px;
+      --breakpoint-lg: 960px;
+    }
+  </style>
+
+  <!-- Main Java Script -->
+  <script defer src="./main.js"></script>
+
+</head>
+
+<body class="min-h-dvh max-w-6xl mx-auto bg-(--Navy-950) font-[Rubik] flex items-center justify-center p-6">
+
+  <main
+    class="w-full grid auto-rows-max grid-cols-1 xs:grid-cols-2 lg:grid-cols-4 xs:grid-rows-2 justify-items-center gap-[30px]">
+
+    <!-- Profile Card  -->
+    <section class="w-full bg-(--Navy-900) rounded-2xl row-span-2 flex flex-col justify-between">
+      <!-- Top -->
+      <div class="h-full bg-(--Purple-600) p-8 rounded-2xl">
+        <div class="flex items-center xs:items-start xs:flex-col gap-4 md:gap-10">
+
+          <img src="./images/image-jeremy.png" alt="Jeremy Robson"
+            class="size-20 object-cover border-3 border-white rounded-full">
+
+          <div class="flex flex-col gap-2 text-white">
+            <p>Report for</p>
+            <h1 class="font-light text-2xl xs:text-4xl lg:text-5xl">Jeremy Robson</h1>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom -->
+
+      <div class="flex items-center xs:items-start justify-between xs:flex-col p-6 gap-5">
+        <button class="cursor-pointer text-(--Purple-500) duration-300 hover:text-white" data-timeframe="daily">
+          Daily
+        </button>
+        <button class="text-white cursor-pointer text-(--Purple-500) duration-300 hover:text-white"
+          data-timeframe="weekly">
+          Weekly
+        </button>
+        <button class="cursor-pointer text-(--Purple-500) duration-300 hover:text-white" data-timeframe="monthly">
+          Monthly
+        </button>
+      </div>
+    </section>
+
+    <!-- Work -->
+    <section
+      class="card w-full bg-(--Orange-300) rounded-2xl flex flex-col justify-between duration-300 hover:-translate-y-2 hover:scale-105">
+      <!-- Icon -->
+      <div class="h-12 bg-[url(./images/icon-work.svg)] bg-no-repeat bg-right-top mr-4"></div>
+
+      <!-- Contant -->
+      <div class="bg-(--Navy-900) flex flex-col gap-4 p-6 rounded-xl">
+        <!-- Top -->
+        <div class="w-full flex items-center justify-between gap-4">
+          <h2 class="cardType text-lg text-white font-medium">Title</h2>
+          <img src="./images/icon-ellipsis.svg" alt="ellipsis" class="w-5 h-auto duration-300 hover:scale-110">
+        </div>
+
+        <!-- Bottom -->
+        <div class="flex flex-col">
+          <h3 class="currentHours text-[3.5rem] text-white font-light">0hrs</h3>
+          <p class="previousHours text-(--Purple-500)">Last month - 0hrs</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Play -->
+    <section
+      class="card w-full bg-(--Blue-300) rounded-2xl flex flex-col justify-between duration-300 hover:-translate-y-2 hover:scale-105">
+      <!-- Icon -->
+      <div class="h-12 bg-[url(./images/icon-play.svg)] bg-no-repeat bg-right-top mr-4"></div>
+
+      <!-- Contant -->
+      <div class="bg-(--Navy-900) flex flex-col gap-4 p-6 rounded-xl">
+        <!-- Top -->
+        <div class="w-full flex items-center justify-between gap-4">
+          <h2 class="cardType text-lg text-white font-medium">Title</h2>
+          <img src="./images/icon-ellipsis.svg" alt="ellipsis" class="w-5 h-auto duration-300 hover:scale-110">
+        </div>
+
+        <!-- Bottom -->
+        <div class="flex flex-col">
+          <h3 class="currentHours text-[3.5rem] text-white font-light">0hrs</h3>
+          <p class="previousHours text-(--Purple-500)">Last month - 0hrs</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Study -->
+    <section
+      class="card w-full bg-(--Pink-400) rounded-2xl flex flex-col justify-between duration-300 hover:-translate-y-2 hover:scale-105">
+      <!-- Icon -->
+      <div class="h-12 bg-[url(./images/icon-study.svg)] bg-no-repeat bg-right-top mr-4"></div>
+
+      <!-- Contant -->
+      <div class="bg-(--Navy-900) flex flex-col gap-4 p-6 rounded-xl">
+        <!-- Top -->
+        <div class="w-full flex items-center justify-between gap-4">
+          <h2 class="cardType text-lg text-white font-medium">Title</h2>
+          <img src="./images/icon-ellipsis.svg" alt="ellipsis" class="w-5 h-auto duration-300 hover:scale-110">
+        </div>
+
+        <!-- Bottom -->
+        <div class="flex flex-col">
+          <h3 class="currentHours text-[3.5rem] text-white font-light">0hrs</h3>
+          <p class="previousHours text-(--Purple-500)">Last month - 0hrs</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Exercise -->
+    <section
+      class="card w-full bg-(--Green-400) rounded-2xl flex flex-col justify-between duration-300 hover:-translate-y-2 hover:scale-105">
+      <!-- Icon -->
+      <div class="h-12 bg-[url(./images/icon-exercise.svg)] bg-no-repeat bg-right-top mr-4"></div>
+
+      <!-- Contant -->
+      <div class="bg-(--Navy-900) flex flex-col gap-4 p-6 rounded-xl">
+        <!-- Top -->
+        <div class="w-full flex items-center justify-between gap-4">
+          <h2 class="cardType text-lg text-white font-medium">Title</h2>
+          <img src="./images/icon-ellipsis.svg" alt="ellipsis" class="w-5 h-auto duration-300 hover:scale-110">
+        </div>
+
+        <!-- Bottom -->
+        <div class="flex flex-col">
+          <h3 class="currentHours text-[3.5rem] text-white font-light">0hrs</h3>
+          <p class="previousHours text-(--Purple-500)">Last month - 0hrs</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Social -->
+    <section
+      class="card w-full bg-(--Purple-700) rounded-2xl flex flex-col justify-between duration-300 hover:-translate-y-2 hover:scale-105">
+      <!-- Icon -->
+      <div class="h-12 bg-[url(./images/icon-social.svg)] bg-no-repeat bg-right-top mr-4"></div>
+
+      <!-- Contant -->
+      <div class="bg-(--Navy-900) flex flex-col gap-4 p-6 rounded-xl">
+        <!-- Top -->
+        <div class="w-full flex items-center justify-between gap-4">
+          <h2 class="cardType text-lg text-white font-medium">Title</h2>
+          <img src="./images/icon-ellipsis.svg" alt="ellipsis" class="w-5 h-auto duration-300 hover:scale-110">
+        </div>
+
+        <!-- Bottom -->
+        <div class="flex flex-col">
+          <h3 class="currentHours text-[3.5rem] text-white font-light">0hrs</h3>
+          <p class="previousHours text-(--Purple-500)">Last month - 0hrs</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Self Care -->
+    <section
+      class="card w-full bg-(--Yellow-300) rounded-2xl flex flex-col justify-between duration-300 hover:-translate-y-2 hover:scale-105">
+      <!-- Icon -->
+      <div class="h-12 bg-[url(./images/icon-self-care.svg)] bg-no-repeat bg-right-top mr-4"></div>
+
+      <!-- Contant -->
+      <div class="bg-(--Navy-900) flex flex-col gap-4 p-6 rounded-xl">
+        <!-- Top -->
+        <div class="w-full flex items-center justify-between gap-4">
+          <h2 class="cardType text-lg text-white font-medium">Title</h2>
+          <img src="./images/icon-ellipsis.svg" alt="ellipsis" class="w-5 h-auto duration-300 hover:scale-110">
+        </div>
+
+        <!-- Bottom -->
+        <div class="flex flex-col">
+          <h3 class="currentHours text-[3.5rem] text-white font-light">0hrs</h3>
+          <p class="previousHours text-(--Purple-500)">Last month - 0hrs</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+</body>
+
+</html>
