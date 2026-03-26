@@ -28,8 +28,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/Wolf-Root/Frontend-Mentor/tree/main/Building-responsive-layouts/Four-Card-Feature-Sections)
-- Live Site URL: [Add live site URL here](https://wolf-root.github.io/Frontend-Mentor/Building-responsive-layouts/Four-Card-Feature-Sections)
+- Solution URL: [solution URL](https://www.frontendmentor.io/solutions/four-card-feature-section-_1xRhPBxoz)
+- Live Site URL: [live site URL](https://wolf-root.github.io/Frontend-Mentor/Building-responsive-layouts/Four-Card-Feature-Sections)
 
 ## My process
 

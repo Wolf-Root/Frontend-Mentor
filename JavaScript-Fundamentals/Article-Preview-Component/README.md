@@ -30,7 +30,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Solution URL](https://github.com/Wolf-Root/Frontend-Mentor/tree/main/JavaScript-Fundamentals/Article-Preview-Component)
+- Solution URL: [Solution URL](https://www.frontendmentor.io/solutions/article-preview-component-2mDhx9L4rP)
 - Live Site URL: [Live Site URL](https://wolf-root.github.io/Frontend-Mentor/JavaScript-Fundamentals/Article-Preview-Component/)
 
 ## My process

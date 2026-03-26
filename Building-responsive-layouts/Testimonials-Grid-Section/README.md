@@ -28,7 +28,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Solution URL](https://github.com/Wolf-Root/Frontend-Mentor/tree/main/Building-responsive-layouts/Testimonials-Grid-Section)
+- Solution URL: [Solution URL](https://www.frontendmentor.io/solutions/testimonials-grid-section-ao7kXoXTGY)
 - Live Site URL: [Live Site URL](https://wolf-root.github.io/Frontend-Mentor/Building-responsive-layouts/Testimonials-Grid-Section)
 
 ## My process

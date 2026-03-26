@@ -35,7 +35,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Solution URL](https://github.com/Wolf-Root/Frontend-Mentor/tree/main/JavaScript-Fundamentals/Newsletter-Sign-Up)
+- Solution URL: [Solution URL](https://www.frontendmentor.io/solutions/newsletter-sign-up-form-with-success-message-YjgtOGbI3R)
 - Live Site URL: [Live Site URL](https://wolf-root.github.io/Frontend-Mentor/JavaScript-Fundamentals/Newsletter-Sign-Up/)
 
 ## My process
