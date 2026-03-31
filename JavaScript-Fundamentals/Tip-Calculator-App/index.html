@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Tip calculator app</title>
+  <link rel="stylesheet" href="./style.css">
+  <script defer src="./main.js"></script>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+</head>
+
+<body class="min-h-dvh w-full max-w-screen-md bg-(--Grey-200) flex items-center justify-center container mx-auto">
+  <main class="w-full flex flex-col items-center justify-between gap-5 md:gap-10 font-[Space_Mono,_monospace]">
+    <header class="pt-5 md:p-0">
+      <h1 class="text-2xl font-bold tracking-[10px] text-(--Green-900)">
+        SPLI <br> TTER
+      </h1>
+    </header>
+
+    <section
+      class="w-full bg-white flex flex-col md:flex-row justify-between gap-6 md:gap-8 p-6 md:p-8 rounded-xl drop-shadow-lg">
+      <!-- Right -->
+      <div class="flex-1 flex flex-col justify-between gap-3 md:gap-4">
+        <!-- Bill -->
+        <div class="flex flex-col gap-2.5 md:gap-3.5">
+          <div class="flex items-center justify-between">
+            <label class="text-sm font-bold text-(--Grey-500)" for="Bill">Bill</label>
+            <span class="text-sm font-bold text-red-500 hidden" id="BillError">Numbers only</span>
+          </div>
+          <div class="relative flex items-center justify-between">
+            <img src="./images/icon-dollar.svg" alt="Dollar Icon" aria-hidden="true"
+              class="h-4 w-auto absolute left-3.5 z-10">
+            <input type="text" maxlength="6" name="Bill" id="Bill" placeholder="0"
+              class="w-full h-4 p-5 pl-7 bg-(--Grey-50) text-(--Green-900) text-2xl font-bold text-right border-none rounded-lg caret-(--Green-400) hover:outline-2 hover:outline-(--Green-400) focus:outline-2 focus:outline-(--Green-400) placeholder:text-(--Grey-400)">
+
+          </div>
+        </div>
+
+        <!-- Tip -->
+        <div class="flex flex-col justify-between gap-2.5 md:gap-3.5">
+          <h2 class="text-sm font-bold text-(--Grey-500)">Select Tip %</h2>
+
+          <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
+            <button data-tip="0.05"
+              class="TipBtn w-full h-full p-2 bg-(--Green-900) rounded-lg text-white font-bold text-lg cursor-pointer duration-300 hover:bg-(--Grey-200) hover:text-(--Green-900) hover:brightness-110">
+              5%
+            </button>
+            <button data-tip="0.10"
+              class="TipBtn w-full h-full p-2 bg-(--Green-900) rounded-lg text-white font-bold text-lg cursor-pointer duration-300 hover:bg-(--Grey-200) hover:text-(--Green-900) hover:brightness-110">
+              10%
+            </button>
+            <button data-tip="0.15"
+              class="TipBtn w-full h-full p-2 bg-(--Green-900) rounded-lg text-white font-bold text-lg cursor-pointer duration-300 hover:bg-(--Grey-200) hover:text-(--Green-900) hover:brightness-110">
+              15%
+            </button>
+            <button data-tip="0.25"
+              class="TipBtn w-full h-full p-2 bg-(--Green-900) rounded-lg text-white font-bold text-lg cursor-pointer duration-300 hover:bg-(--Grey-200) hover:text-(--Green-900) hover:brightness-110">
+              25%
+            </button>
+            <button data-tip="0.50"
+              class="TipBtn w-full h-full p-2 bg-(--Green-900) rounded-lg text-white font-bold text-lg cursor-pointer duration-300 hover:bg-(--Grey-200) hover:text-(--Green-900) hover:brightness-110">
+              50%
+            </button>
+
+            <input type="number" placeholder="Custom" id="customInput" maxlength="3"
+              class="w-full h-full text-right text-xl font-bold border-none p-1.5 rounded-lg bg-(--Grey-50) text-(--Green-900) cursor-pointer caret-(--Green-400) hover:outline-2 hover:outline-(--Green-400) focus:outline-2 focus:outline-(--Green-400) placeholder:text-center placeholder:text-lg placeholder:font-bold placeholder:text-(--Grey-400)">
+          </div>
+        </div>
+
+        <!-- People -->
+        <div class="flex flex-col gap-2.5 md:gap-3.5">
+          <div class="flex items-center justify-between">
+            <label class="text-sm font-bold text-(--Grey-500)" for="People">Number of People</label>
+            <span class="text-sm font-bold text-red-500 hidden" id="PeopleError">Numbers only</span>
+          </div>
+          <div class="relative flex items-center justify-between">
+            <img src="./images/icon-person.svg" alt="Person Icon" aria-hidden="true"
+              class="h-4 w-auto absolute left-3.5 z-10">
+            <input type="text" maxlength="6" name="People" id="People" placeholder="0"
+              class="w-full h-4 p-5 pl-7 bg-(--Grey-50) text-(--Green-900) text-2xl font-bold text-right border-none rounded-lg caret-(--Green-400) hover:outline-2 hover:outline-(--Green-400) focus:outline-2 focus:outline-(--Green-400) placeholder:text-(--Grey-400)">
+
+          </div>
+        </div>
+      </div>
+
+      <!-- Left -->
+      <div class="flex-1 p-6 md:p-8 lg:p-10 flex flex-col justify-between gap-5 bg-(--Green-900) rounded-xl">
+        <div class="h-full flex flex-col items-center gap-5">
+          <!-- Tip Amount -->
+          <div class="w-full flex justify-between">
+            <div class="flex-2">
+              <p class="text-white font-bold">Tip Amount</p>
+              <span class="text-xs text-(--Grey-400) font-bold">/ person</span>
+            </div>
+
+            <h2 id="tipAmount" class="flex-4 flex justify-end text-4xl font-bold text-(--Green-400)">$0.00</h2>
+          </div>
+
+          <!-- Total -->
+          <div class="w-full flex justify-between">
+            <div class="flex-2">
+              <p class="text-white font-bold">Total</p>
+              <span class="text-xs text-(--Grey-400) font-bold">/ person</span>
+            </div>
+
+            <h2 id="Total" class="flex-4 flex justify-end text-4xl font-bold text-(--Green-400)">$0.00</h2>
+          </div>
+        </div>
+
+        <!-- Reset Btn -->
+        <button id="Reset" disabled
+          class="w-full p-2 bg-(--Green-400) text-center text-lg font-bold text-(--Grey-500) capitalize rounded-lg border-none cursor-pointer opacity-40 duration-300 hover:opacity-100 hover:text-(--Green-900) hover:bg-(--Grey-200) hover:brightness-110">Reset</button>
+
+      </div>
+    </section>
+  </main>
+
+
+</body>
+
+</html>
